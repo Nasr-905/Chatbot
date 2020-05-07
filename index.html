@@ -6,40 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>LandAI</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
-    <div class="topnav">
+    <div id="topnav">
       <a class="active" href="#">Home</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="/order.html">Place order</a>
-      <div class="login-container">
+      <div class="">
+        <button
+          onclick="document.getElementById('id01').style.display='block'"
+          class="w3-button"
+        >
+          Contact
+        </button>
+
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container" style=>
+              <span
+                onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright"
+                >&times;</span
+              >
+              <br />
+              <div
+                class="login"
+                style="
+                  float: left;
+                  display: inline;
+                  text-align: center;
+                  padding-left: 35%;
+                "
+              >
+                <form action="">
+                  <br />
+                  <input type="text" placeholder="Full Name" name="name" />
+                  <br />
+                  <br />
+                  <label for="Desc">Describe The Issue Here</label>
+                  <br />
+                  <textarea name="Desc" id="" cols="30" rows="10"></textarea>
+                  <br />
+                  <button type="submit">Submit</button>
+                  <button type="reset" value="Reset">Reset</button>
+                  <br />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login">
         <form action="">
           <input type="text" placeholder="ID" name="username" />
           <input type="password" placeholder="Password" name="psw" />
           <button type="submit">Login</button>
         </form>
       </div>
+      <span class="border">Land.AI</span>
     </div>
-    <div class="bgimg-1">
-      <div class="caption">
-        <span class="border" style="background-image: url(949jpg);"
-          >Land.AI</span
-        >
+    <div style="position: relative;">
+      <div
+        style="
+          color: #ddd;
+          background-color: #736a79;
+          text-align: center;
+          padding: 50px 80px;
+          text-align: justify;
+        "
+      >
+        <p>
+          Scroll up and down to really get the feeling of how Parallax Scrolling
+          works.
+        </p>
       </div>
     </div>
-
     <div
       style="
         color: #777;
-        background-color: white;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       "
     >
-      <h3 style="text-align: center;">History of Chatbots</h3>
-      <p style="line-height: 40px;">
+      <h3 class="paraHead">History of Chatbots</h3>
+      <p class="para">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
         excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
         sequi facere dignissimos quaerat facilis ea rem nostrum maiores deserunt
@@ -98,25 +149,11 @@
       </p>
     </div>
 
-    <div class="bgimg-2">
-      <div class="caption">
-        <span
-          class="border"
-          style="
-            background-color: transparent;
-            font-size: 25px;
-            color: #f7f7f7;
-          "
-          >LESS HEIGHT</span
-        >
-      </div>
-    </div>
-
     <div style="position: relative;">
       <div
         style="
           color: #ddd;
-          background-color: #282e34;
+          background-color: #736a79;
           text-align: center;
           padding: 50px 80px;
           text-align: justify;
@@ -128,36 +165,38 @@
         </p>
       </div>
     </div>
-
-    <div class="bgimg-3">
-      <div class="caption">
-        <span
-          class="border"
-          style="
-            background-color: transparent;
-            font-size: 25px;
-            color: #f7f7f7;
-          "
-          >SCROLL UP</span
-        >
-      </div>
+    <div
+      style="
+        color: #777;
+        text-align: center;
+        padding: 50px 80px;
+        text-align: justify;
+      "
+    >
+      <h3 class="paraHead">Projected Growth</h3>
+      <p class="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+        excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
+        sequi facere dignissimos quaerat facilis ea rem nostrum maiores deserunt
+        cupiditate culpa ipsum aut. Fugit, dolorum! Earum con
+      </p>
     </div>
+    <!-- <script>
+      // When the user scrolls down 50px from the top of the document, resize the header's font size
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-    <div style="position: relative;">
-      <div
-        style="
-          color: #ddd;
-          background-color: #282e34;
-          text-align: center;
-          padding: 50px 80px;
-          text-align: justify;
-        "
-      >
-        <p>
-          Scroll up and down to really get the feeling of how Parallax Scrolling
-          works.
-        </p>
-      </div>
-    </div>
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 70 ||
+          document.documentElement.scrollTop > 70
+        ) {
+          document.getElementsByClassName("border").style.position = "fixed";
+        } else {
+          document.getElementById("border").style.top = "50%";
+        }
+      }
+    </script> -->
   </body>
 </html>
