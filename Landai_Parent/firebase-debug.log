@@ -1,0 +1,25 @@
+[debug] [2020-05-29T19:11:24.673Z] ----------------------------------------------------------------------
+[debug] [2020-05-29T19:11:24.675Z] Command:       /usr/local/bin/firebase /Users/Nasrudeen.Oladimeji/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-05-29T19:11:24.676Z] CLI Version:   7.14.0
+[debug] [2020-05-29T19:11:24.676Z] Platform:      darwin
+[debug] [2020-05-29T19:11:24.676Z] Node Version:  v12.13.1
+[debug] [2020-05-29T19:11:24.680Z] Time:          Fri May 29 2020 13:11:24 GMT-0600 (Mountain Daylight Time)
+[debug] [2020-05-29T19:11:24.681Z] ----------------------------------------------------------------------
+[debug] [2020-05-29T19:11:24.681Z] 
+[debug] [2020-05-29T19:11:24.698Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-29T19:11:24.699Z] > authorizing via signed-in user
+[debug] [2020-05-29T19:11:24.699Z] [iam] checking project landai-chat for permissions ["firebase.projects.get"]
+[debug] [2020-05-29T19:11:24.701Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/landai-chat:testIamPermissions  
+
+[debug] [2020-05-29T19:11:24.969Z] <<< HTTP RESPONSE 200
+[debug] [2020-05-29T19:11:24.972Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/landai-chat  
+ 
+[debug] [2020-05-29T19:11:25.240Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Nasrudeen.Oladimeji/Documents/Landai_Parent'...
+[info] 
+[debug] [2020-05-29T19:11:25.246Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/landai-chat/webApps/-/config  
+ 
+[debug] [2020-05-29T19:11:25.860Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Landai_Chat
+[info] ✔  hosting: Local server: http://localhost:5000

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="scrollLock" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LandAI</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body class="scrollLock">
+    <div id="fore">
+      <div id="topnav">
+        <div id="navbar">
+          <div class="home">
+            <a class="active" href="#">Home</a>
+            <div class="home-content">
+              <a href="#intro">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <a href="#about">About</a>
+          <div class="">
+            <button
+              onclick="document.getElementById('id01').style.display='block'; hideLogo()"
+              class="w3-button"
+            >
+              Contact
+            </button>
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content" style="width: 375px;">
+                <div class="w3-container">
+                  <span
+                    onclick="document.getElementById('id01').style.display='none'; showLogo()"
+                    class="w3-button w3-display-topright"
+                    >&times;</span
+                  >
+                  <br />
+                  <div
+                    class="login"
+                    style="
+                      display: inline;
+                      text-align: center;
+                      padding-left: 35%;
+                    "
+                  >
+                    <form style="text-align: center;" action="">
+                      <br />
+                      <input type="text" placeholder="Full Name" name="name" />
+                      <br />
+                      <br />
+                      <label for="Desc">Describe The Issue Here</label>
+                      <br />
+                      <textarea
+                        name="Desc"
+                        id=""
+                        cols="30"
+                        rows="10"
+                      ></textarea>
+                      <br />
+                      <button
+                        type="submit"
+                        onclick="showLogo()"
+                        style="position: relative; left: 34%;"
+                      >
+                        Submit
+                      </button>
+                      <button
+                        type="reset"
+                        value="Reset"
+                        style="position: relative; left: 35%;"
+                      >
+                        Reset
+                      </button>
+                      <br />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="navlogo" src="./Images/logo.png" alt="" />
+          </div>
+          <div class="login pass">
+            <form action="">
+              <input type="text" placeholder="ID" name="username" />
+              <input type="password" placeholder="Password" name="psw" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <img
+        id="logo"
+        src="./Images/logo.png"
+        alt="logo"
+        onscroll="scrollFunction()"
+      />
+    </div>
+
+    <div class="bodyPara">
+      <div class="header intro" id="intro">
+        <br />
+        <br />
+        <h2>My Header</h2>
+      </div>
+      <p class="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+        excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
+        sequi facere dignissimos quaerat facilis ea rem nostrum maiores deserunt
+        cupiditate culpa ipsum aut. Fugit, dolorum! Earum consequatur
+        repudiandae non, explicabo molestias culpa quo totam! Laudantium, velit,
+        a dolor unde veritatis quos eaque ducimus repudiandae iure delectus
+        atque, quidem suscipit molestiae amet iusto voluptates quia ab ipsum
+        saepe! Perspiciatis iusto quidem ipsa tempore, magni optio, consequatur
+        quis quia alias illum iure neque! Repellat iste cum eius dolor
+        voluptatem sunt, dolore magnam voluptatum, voluptas, sapiente beatae
+        officiis repellendus neque ex non. Officia ullam iste cumque quos
+        numquam, repudiandae nostrum expedita magni. Maxime officia modi
+        veritatis quod nesciunt explicabo maiores unde dignissimos! Porro ab
+        facilis voluptate quaerat ea, vitae veritatis exercitationem eos ex
+        voluptas nihil quae assumenda dolor incidunt delectus labore odit!
+        Libero natus ea neque. Ut aliquid voluptas nisi, inventore officia
+        delectus excepturi iure, deleniti quam explicabo praesentium similique
+        harum adipisci omnis eius tempora recusandae fuga? Nisi eaque veniam a,
+        rerum error quisquam natus id quis, inventore consectetur velit illo!
+        Qui repellendus accusamus, doloremque repellat ut amet iusto laborum
+        quae adipisci obcaecati nulla fugit recusandae consequatur tempora
+        maiores libero? Consectetur aspernatur cum fugiat nesciunt vel iste
+        repellendus? Ullam, dignissimos ipsa aspernatur earum beatae praesentium
+        corporis maxime ipsum laudantium odio accusantium tenetur optio eligendi
+        numquam illo adipisci expedita cum totam reiciendis. Aliquam illo
+        reiciendis tenetur dolore dolorem quibusdam doloribus asperiores ex
+        tempore aspernatur quos odit facere perferendis voluptates est at esse,
+        iste blanditiis. Illum, repellat? Expedita adipisci quas nisi obcaecati
+        vero. Odio, explicabo natus dolore, quia, molestias distinctio culpa
+        doloremque atque facere aspernatur placeat soluta quo corrupti quibusdam
+        veritatis eius. Atque ab aspernatur enim doloribus dolorum perspiciatis
+        iure corporis nostrum vero dolore sint itaque cupiditate natus maiores
+        reiciendis libero, officia harum, ducimus minus. Mollitia deserunt
+        facilis quidem autem ducimus dolorem corrupti asperiores minima nihil,
+        est minus excepturi in animi neque rem, architecto quod voluptates
+        voluptatum laboriosam earum. Minima natus, qui, velit temporibus quasi
+        quam ipsa veritatis sequi eum dolores perspiciatis quod fugiat
+        accusantium corrupti officiis tempore dicta eius nostrum veniam dolore
+        voluptas id suscipit. Totam vitae enim nam quia doloribus repellat
+        ducimus soluta labore, assumenda debitis expedita. Vel, nisi! Temporibus
+        culpa saepe et debitis incidunt hic, vitae vero repudiandae tempore
+        voluptas aspernatur, eaque officia quos nulla ducimus excepturi ipsum
+        asperiores alias modi, perspiciatis architecto? Saepe numquam eius
+        nostrum explicabo sit a mollitia ab exercitationem rem, doloremque aut
+        est ex quo atque amet soluta adipisci, consectetur debitis eligendi
+        vitae porro accusantium autem? Aliquid, vel? Quas rerum impedit fugit
+        sed qui. Velit, beatae. Possimus nulla necessitatibus unde voluptas
+        facere accusantium voluptatem eos, natus sint excepturi quaerat quisquam
+        aperiam aspernatur, recusandae hic. Unde quibusdam laboriosam quaerat ut
+        doloribus nemo veniam? Aut eligendi reiciendis nihil perferendis nostrum
+        cum sed quisquam, omnis atque incidunt quasi natus inventore temporibus
+        animi fugiat maiores error necessitatibus excepturi hic assumenda
+        voluptas? Veniam corrupti cupiditate nulla incidunt ratione
+        necessitatibus dolor perspiciatis voluptas culpa ab! Quo voluptatem
+        dolore iste quod explicabo optio? Autem, doloribus corporis?
+      </p>
+    </div>
+    <div class="bodyPara">
+      <div class="header">
+        <h2>My Header</h2>
+      </div>
+      <p class="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+        excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
+        sequi facere dignissimos quaerat facilis ea rem nostrum maiores deserunt
+        cupiditate culpa ipsum aut. Fugit, dolorum! Earum consequatur
+        repudiandae non, explicabo molestias culpa quo totam! Laudantium, velit,
+        a dolor unde veritatis quos eaque ducimus repudiandae iure delectus
+        atque, quidem suscipit molestiae amet iusto voluptates quia ab ipsum
+        saepe! Perspiciatis iusto quidem ipsa tempore, magni optio, consequatur
+        quis quia alias illum iure neque! Repellat iste cum eius dolor
+        voluptatem sunt, dolore magnam voluptatum, voluptas, sapiente beatae
+        officiis repellendus neque ex non. Officia ullam iste cumque quos
+        numquam, repudiandae nostrum expedita magni. Maxime officia modi
+        veritatis quod nesciunt explicabo maiores unde dignissimos! Porro ab
+        facilis voluptate quaerat ea, vitae veritatis exercitationem eos ex
+        voluptas nihil quae assumenda dolor incidunt delectus labore odit!
+        Libero natus ea neque. Ut aliquid voluptas nisi, inventore officia
+        delectus excepturi iure, deleniti quam explicabo praesentium similique
+        harum adipisci omnis eius tempora recusandae fuga? Nisi eaque veniam a,
+        rerum error quisquam natus id quis, inventore consectetur velit illo!
+        Qui repellendus accusamus, doloremque repellat ut amet iusto laborum
+        quae adipisci obcaecati nulla fugit recusandae consequatur tempora
+        maiores libero? Consectetur aspernatur cum fugiat nesciunt vel iste
+        repellendus? Ullam, dignissimos ipsa aspernatur earum beatae praesentium
+        corporis maxime ipsum laudantium odio accusantium tenetur optio eligendi
+        numquam illo adipisci expedita cum totam reiciendis. Aliquam illo
+        reiciendis tenetur dolore dolorem quibusdam doloribus asperiores ex
+        tempore aspernatur quos odit facere perferendis voluptates est at esse,
+        iste blanditiis. Illum, repellat? Expedita adipisci quas nisi obcaecati
+        vero. Odio, explicabo natus dolore, quia, molestias distinctio culpa
+        doloremque atque facere aspernatur placeat soluta quo corrupti quibusdam
+        veritatis eius. Atque ab aspernatur enim doloribus dolorum perspiciatis
+        iure corporis nostrum vero dolore sint itaque cupiditate natus maiores
+        reiciendis libero, officia harum, ducimus minus. Mollitia deserunt
+        facilis quidem autem ducimus dolorem corrupti asperiores minima nihil,
+        est minus excepturi in animi neque rem, architecto quod voluptates
+        voluptatum laboriosam earum. Minima natus, qui, velit temporibus quasi
+        quam ipsa veritatis sequi eum dolores perspiciatis quod fugiat
+        accusantium corrupti officiis tempore dicta eius nostrum veniam dolore
+        voluptas id suscipit. Totam vitae enim nam quia doloribus repellat
+        ducimus soluta labore, assumenda debitis expedita. Vel, nisi! Temporibus
+        culpa saepe et debitis incidunt hic, vitae vero repudiandae tempore
+        voluptas aspernatur, eaque officia quos nulla ducimus excepturi ipsum
+        asperiores alias modi, perspiciatis architecto? Saepe numquam eius
+        nostrum explicabo sit a mollitia ab exercitationem rem, doloremque aut
+        est ex quo atque amet soluta adipisci, consectetur debitis eligendi
+        vitae porro accusantium autem? Aliquid, vel? Quas rerum impedit fugit
+        sed qui. Velit, beatae. Possimus nulla necessitatibus unde voluptas
+        facere accusantium voluptatem eos, natus sint excepturi quaerat quisquam
+        aperiam aspernatur, recusandae hic. Unde quibusdam laboriosam quaerat ut
+        doloribus nemo veniam? Aut eligendi reiciendis nihil perferendis nostrum
+        cum sed quisquam, omnis atque incidunt quasi natus inventore temporibus
+        animi fugiat maiores error necessitatibus excepturi hic assumenda
+        voluptas? Veniam corrupti cupiditate nulla incidunt ratione
+        necessitatibus dolor perspiciatis voluptas culpa ab! Quo voluptatem
+        dolore iste quod explicabo optio? Autem, doloribus corporis?
+      </p>
+    </div>
+    <script src="main.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+  </body>
+</html>

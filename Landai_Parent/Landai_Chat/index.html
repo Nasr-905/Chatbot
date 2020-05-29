@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="scrollLock" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>LandAI</title>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="scrollLock">
+    <div id="fore">
+      <div id="topnav">
+        <div id="navbar">
+          <div class="home">
+            <a class="active" href="#">Home</a>
+            <div class="home-content">
+              <a class="homeHeadLink" href="#intro">Why Chatbots?</a>
+            </div>
+          </div>
+          <a class="" href="about.html">About</a>
+          <div>
+            <div class="">
+              <button onclick="modalOpen('id01'); showDialog()" class="w3-button loggedIn">
+              Contact
+            </button>
+            </div>
+            
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content" style="width: 375px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id01'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        text-align: center;
+                        padding-left: 35%;
+                      ">
+                    <form id="contactQuery" style="text-align: center;" action="">
+                      <br />
+                      <input id="queryTitle" type="text" onchange="titleFunction(value)" placeholder="Query Title" name="name" />
+                      <br />
+                      <br />
+                      <label id="queryBody" for="Desc">Describe The Query Here</label>
+                      <br />
+                      <textarea name="Desc" onchange="bodyFunction(value)" id="" cols="30" rows="10"></textarea>
+                      <br />
+                      <button id="addBtn" type="submit" onclick="modalClose('id01'); closeDialog()" style="position: relative; left: 34%;">
+                        Submit
+                      </button>
+                      <button type="reset" value="Reset" style="position: relative; left: 35%;">
+                        Reset
+                      </button>
+                      <br />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loggedIn">
+          <a onclick="logout()" class="">Log out</a>            
+          </div>
+          <div class="loggedIn profile">
+            <a class="" href="./profile.html">Profile</a>
+          </div>
+          <div>
+            <img class="navlogo" src="./Images/logo.png" alt="" />
+          </div>
+          <div class="">
+            <button onclick="modalOpen('id02'); showDialog()" class="w3-button loggedOut">
+              Sign Up
+            </button>
+            <div id="id02" class="w3-modal">
+              <div class="w3-modal-content" style="width: 740px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id02'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        padding-left: 35%;
+                        padding-top: 10px;
+                      ">
+                      <br>
+                      <br />
+                      <button id="signUpWithGoogle" onclick="googleLogin()">Sign Up With Google</button id="signUpWithGoogle">
+                      <br />
+                      <br />
+                      <form id="signupForm" action="">
+                        <br>
+                        <label id="signUpLabel" style="width: 700px;" for="email">Sign Up With Email Address</label>
+                        <br>
+                        <br>
+                        <input id="signupEmail" style="width: 700px;" class="emailLogin" type="email" placeholder="Email adress" name="email" id="">
+                        <br>
+                        <br>
+                        <input id="signupPassword" style="width: 700px;" class="emailLogin" type="password" placeholder="Choose password" name="password" id="">
+                        <br>
+                        <br>
+                        <input style="width: 200px;" type="submit" name="submit" id="">
+                      </form>
+                      <br />
+                      <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div>
+              <div class="">
+                <button onclick="modalOpen('id03'); showDialog()" class="w3-button">
+              Log In
+            </button>
+              </div>
+            <div id="id03" class="w3-modal ">
+              <div class="w3-modal-content" style="width: 740px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id03'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        padding-left: 35%;
+                        padding-top: 10px;
+                      ">
+                      <br>
+                      <br />
+                      <button id="loginGoogle" onclick="googleLogin()">Log In With Google</button id="loginGoogle">
+                      <br />
+                      <br />
+                      <form id="login-form" action="">
+                        <br>
+                        <label id="loginLabel" style="width: 700px;" for="email">Log In With Email Address</label>
+                        <br>
+                        <br>
+                        <input id="loginEmail" style="width: 700px;" type="email" placeholder="Email adress" name="email" id="">
+                        <br>
+                        <br>
+                        <input id="loginPassword" style="width: 700px;" type="password" placeholder="Password" name="password" id="">
+                        <br>
+                        <br>
+                        <input style="width: 200px;" type="submit" name="submit" id="">
+                      </form>
+                      <br />
+                      <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                </div>
+                <img src="Images/landWallFore.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="hideLogo">
+        <img id="logo" src="./Images/logo.png" alt="logo" onscroll="scrollFunction()" />
+      </div>
+      
+    </div>
+    <div style="scroll-behavior: smooth;" class="webContent">
+    <div style="scroll-behavior: smooth;" class="bodyPara">
+      <div style="scroll-behavior: smooth;" class="header intro" id="intro">
+        <br />
+        <br />
+        <h2>Why Chatbots?</h2>
+      </div>
+      <p class="para" style="padding-top: 15px;">
+1) Automated Customer Support For Similar Queries
+<br>
+For any industry type, on the off chance that you consider the client base, there are some fundamental inquiries that
+clients by and large pose. What's more, for this particular inquiry, the same explicit answers are required to be
+addressed each time the client makes the comparative question. All things considered, for such purposes, a chatbot is
+the best approach to address these similar inquiries.
+<br>
+</p>
+<p class="para" style="padding-top: 15px;">
+2) Saves Humans from performing Repetitive tasks
+<br>
+Chatbots can be utilized to help clients or customers for a particular undertaking, at whatever point they need. What's
+more, as chatbots don't get drained or exhausted, thus can be utilized to give client care nonstop. In different terms,
+the HR can be liberated from such occupation and ought to be utilized towards increasingly gainful business assignments.
+This will spare the expense of client service.
+<br>
+</p class="para" style="padding-top: 15px;">
+<p class="para" style="padding-top: 15px;">
+3) Allows users to have their questions answered immediately
+<br>
+Competition is increasing, clients get slanted toward an answer that doesn't require a lot of difficulties and
+simultaneously captivates multiple clients automatically. To put it plainly, they are searching for the more subjective
+arrangement using the least amount of exertion. With chatbots, hitting potential clients is simple by offering required
+data regardless of the day or time. Bots are less inclined to blunders, henceforth, the better client experience can
+assist with setting up a superior brand.
+<br>
+</p class="para" style="padding-top: 15px;">
+<p class="para" style="padding-top: 15px;">
+4) Their cheap to build!
+<br>
+If it's not obvious already, chatbots require less cost in contrast with application improvement. Indeed, making
+speculation into a quality item like chatbot is worth it as it can offer a superior encounter to your clients.
+<br>
+</p class="para" style="padding-top: 15px;">
+<p class="para" style="padding-top: 15px;">
+5) Chatbots provide more value to early adopters
+<br>
+Additionally, receiving chatbots, you can draw in interested clients and this can advance their satisfaction towards
+your business. For example; if your business is first to embrace new innovation, it has increased the opportunity to
+usher achievement. More business will keep on tieing up with chatbots in the next year and liable to become standard the
+same applications.
+<br>
+      </p class="para" style="padding-top: 15px;">
+    </div>
+    </div>
+    <!-- update the version number as needed -->
+    <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/7.14.5/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.5/firebase-database.js"></script>
+    <script src="/__/firebase/7.14.5/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC-zVuKHsYiwagXEbtpf3Y-xHlp_Fjg_3E",
+        authDomain: "landai-chat.firebaseapp.com",
+        databaseURL: "https://landai-chat.firebaseio.com",
+        projectId: "landai-chat",
+        storageBucket: "landai-chat.appspot.com",
+        messagingSenderId: "17564803050",
+        appId: "1:17564803050:web:9b9ecd35cc88273708dc93",
+        measurementId: "G-5WJXZFWCKH"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.database();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html class="scrollLock" lang="en">

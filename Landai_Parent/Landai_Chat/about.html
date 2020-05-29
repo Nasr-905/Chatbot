@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="scrollLock" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>LandAI</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="topnav" style="height: fit-content;">
+    <div id="navbar">
+      <div class="home">
+        <a href="index.html">Home</a>
+        <div class="home-content">
+              <a class="homeHeadLink" href="index.html#intro">Why Chatbots?</a>
+        </div>
+      </div>
+      <a  class="active" href="#about">About</a>
+      <div>
+        <button onclick="modalOpen('id01'); showDialog()" class="w3-button">
+          Contact
+        </button>
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content" style="width: 375px;">
+            <div class="w3-container">
+              <span onclick="modalClose('id01'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+              <br />
+              <div class="login" style="
+                        display: inline;
+                        text-align: center;
+                        padding-left: 35%;
+                      ">
+                <form style="text-align: center;" action="">
+                  <br />
+                  <input id="queryTitle" type="text" onchange="titleFunction(value)" placeholder="Query Title"
+                    name="name" />
+                  <br />
+                  <br />
+                  <label id="queryBody" for="Desc">Describe The Query Here</label>
+                  <br />
+                  <textarea name="Desc" onchange="bodyFunction(value)" id="" cols="30" rows="10"></textarea>
+                  <br />
+                  <button id="addBtn" type="submit" onclick="modalClose('id01'); closeDialog()"
+                    style="position: relative; left: 34%;">
+                    Submit
+                  </button>
+                  <button type="reset" value="Reset" style="position: relative; left: 35%;">
+                    Reset
+                  </button>
+                  <br />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <a href="./profile.html">Profile</a>
+      </div>
+      <div>
+        <img class="navlogo" src="./Images/logo.png" alt="" />
+      </div>
+      <div class="login pass">
+        <form style="text-align: center;" action="">
+          <input id="logout" style="width: 220px;" type="submit" name="signOut" id="signOut" value="Sign Out" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <h1>Welcome to LandAI</h1>
+  <p style="width: 720px; padding: 20px;">This is a project was made to teach people the basics of chatbots and their potenetial use in our society. You can ask queries through the contact page and be notified when they are answered.</p>
+  <br>
+  <p style="width: 720px; padding: 20px;">This project was built by Nasrudeen Oladimeji</p>
+  <p style="width: 720px; padding: 20px;">Email: nasrudeen.oladimeji@ucc.on.ca</p>
+  <!-- update the version number as needed -->
+  <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script src="/__/firebase/7.14.5/firebase-auth.js"></script>
+  <script src="/__/firebase/7.14.5/firebase-database.js"></script>
+  <script src="/__/firebase/7.14.5/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC-zVuKHsYiwagXEbtpf3Y-xHlp_Fjg_3E",
+      authDomain: "landai-chat.firebaseapp.com",
+      databaseURL: "https://landai-chat.firebaseio.com",
+      projectId: "landai-chat",
+      storageBucket: "landai-chat.appspot.com",
+      messagingSenderId: "17564803050",
+      appId: "1:17564803050:web:9b9ecd35cc88273708dc93",
+      measurementId: "G-5WJXZFWCKH"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html class="scrollLock" lang="en">
