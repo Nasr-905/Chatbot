@@ -1,86 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scrollLock" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>LandAI</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <script src="main.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>LandAI</title>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div id="topnav">
-      <div id="navbar">
-      <div class="home">
-      <a class="active" href="#">Home</a>
-        <div class="home-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
-      
-      <a href="#about">About</a>
-      <div class="">
-        <button
-          onclick="document.getElementById('id01').style.display='block'; hideLogo()"
-          class="w3-button"
-        >
-          Contact
-        </button>
-        <div id="id01" class="w3-modal">
-          <div class="w3-modal-content">
-            <div class="w3-container" style=>
-            <span
-              onclick="document.getElementById('id01').style.display='none'; showLogo()"
-              class="w3-button w3-display-topright"
-              >&times;</span
-            >
-            <br />
-            <div
-              class="login"
-              style="display: inline; text-align: center; padding-left: 35%;"
-            >
-              <form style="text-align: center;" action="">
-                <br />
-                <input type="text" placeholder="Full Name" name="name" />
-                <br />
-                <br />
-                <label for="Desc">Describe The Issue Here</label>
-                <br />
-                <textarea name="Desc" id="" cols="30" rows="10"></textarea>
-                <br />
-                <button type="submit" onclick="showLogo()" style="position: relative; left: 34%;">Submit</button>
-                <button type="reset" value="Reset" style="position: relative; left: 35%;">Reset</button>
-                <br />
-              </form>
+  <body class="scrollLock">
+    <div id="fore">
+      <div id="topnav">
+        <div id="navbar">
+          <div class="home">
+            <a class="active" href="#">Home</a>
+            <div class="home-content">
+              <a class="homeHeadLink" href="#intro">Link 1</a>
+              <a class="homeHeadLink" href="#">Link 2</a>
+              <a class="homeHeadLink" href="#">Link 3</a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+          <div>
+            <button onclick="modalOpen('id01'); showDialog()" class="w3-button">
+              Contact
+            </button>
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content" style="width: 375px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id01'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        text-align: center;
+                        padding-left: 35%;
+                      ">
+                    <form style="text-align: center;" action="">
+                      <br />
+                      <input id="queryTitle" type="text" onchange="titleFunction(value)" placeholder="Query Title" name="name" />
+                      <br />
+                      <br />
+                      <label id="queryBody" for="Desc">Describe The Query Here</label>
+                      <br />
+                      <textarea name="Desc" onchange="bodyFunction(value)" id="" cols="30" rows="10"></textarea>
+                      <br />
+                      <button id="addBtn" type="submit" onclick="modalClose('id01'); closeDialog()" style="position: relative; left: 34%;">
+                        Submit
+                      </button>
+                      <button type="reset" value="Reset" style="position: relative; left: 35%;">
+                        Reset
+                      </button>
+                      <br />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <a href="#">Profile</a>
+            <div class="profile-content">
+              <a class="profileHeadLink" href="#intro">Profile Link 1</a>
+              <a class="profileHeadLink" href="#">Profile Link 2</a>
+              <a class="profileHeadLink" href="#">Profile Link 3</a>
+            </div>
+          </div>
+          <div>
+            <img class="navlogo" src="./Images/logo.png" alt="" />
+          </div>
+          <div>
+            <button onclick="modalOpen('id02'); showDialog()" class="w3-button">
+              Sign Up
+            </button>
+            <div id="id02" class="w3-modal">
+              <div class="w3-modal-content" style="width: 740px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id02'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        padding-left: 35%;
+                        padding-top: 10px;
+                      ">
+                      <br>
+                      <br />
+                      <button id="signUpWithGoogle" onclick="googleLogin()">Sign Up With Google</button id="signUpWithGoogle">
+                      <br />
+                      <br />
+                      <form id="signupForm" action="">
+                        <br>
+                        <label id="signUpLabel" style="width: 700px;" for="email">Sign Up With Email Address</label>
+                        <br>
+                        <br>
+                        <input id="signupEmail" style="width: 700px;" class="emailLogin" type="email" placeholder="Email adress" name="email" id="">
+                        <br>
+                        <br>
+                        <input id="signupPassword" style="width: 700px;" class="emailLogin" type="password" placeholder="Choose password" name="password" id="">
+                        <br>
+                        <br>
+                        <input style="width: 200px;" type="submit" name="submit" id="">
+                      </form>
+                      <br />
+                      <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div>
+            <button onclick="modalOpen('id03'); showDialog()" class="w3-button">
+              Log In
+            </button>
+            <div id="id03" class="w3-modal">
+              <div class="w3-modal-content" style="width: 740px;">
+                <div class="w3-container">
+                  <span onclick="modalClose('id03'); closeDialog()" class="w3-button w3-display-topright">&times;</span>
+                  <br />
+                  <div class="login" style="
+                        display: inline;
+                        padding-left: 35%;
+                        padding-top: 10px;
+                      ">
+                      <br>
+                      <br />
+                      <button id="loginGoogle" onclick="googleLogin()">Log In With Google</button id="loginGoogle">
+                      <br />
+                      <br />
+                      <form id="login-form" action="">
+                        <br>
+                        <label id="loginLabel" style="width: 700px;" for="email">Log In With Email Address</label>
+                        <br>
+                        <br>
+                        <input id="loginEmail" style="width: 700px;" type="email" placeholder="Email adress" name="email" id="">
+                        <br>
+                        <br>
+                        <input id="loginPassword" style="width: 700px;" type="password" placeholder="Password" name="password" id="">
+                        <br>
+                        <br>
+                        <input style="width: 200px;" type="submit" name="submit" id="">
+                      </form>
+                      <br />
+                      <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login pass">
+                    <form style="text-align: center;" action="">
+                      <input id="logout" style="width: 220px;" type="submit" name="signOut" id="signOut" value="Sign Out" />
+                    </form>
+                  </div>
+                </div>
+                <img src="Images/landWallFore.png" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <img id="navlogo" src="./Images/logo.png" alt="">
-      </div>
-    <div class="login pass">
-      <form action="">
-        <input type="text" placeholder="ID" name="username" />
-        <input type="password" placeholder="Password" name="psw" />
-        <input type="submit" value="Login" />
-      </form>
+      <div id="hideLogo">
+        <img id="logo" src="./Images/logo.png" alt="logo" onscroll="scrollFunction()" />
       </div>
       
     </div>
-    <img id="logo" src="./Images/logo.png" alt="logo" />
-    </div>
-      
-
-    <div class="bodyPara">
-    <div class="header" id="">
-      <h2>My Header</h2>
-    </div>
-    
+    <div style="scroll-behavior: smooth;" class="webContent">
+    <div style="scroll-behavior: smooth;" class="bodyPara">
+      <div style="scroll-behavior: smooth;" class="header intro" id="intro">
+        <br />
+        <br />
+        <h2>My Header</h2>
+      </div>
       <p class="para">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
         excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
@@ -143,20 +233,6 @@
       <div class="header">
         <h2>My Header</h2>
       </div>
-    <script>
-      window.onscroll = function () { myFunction() };
-
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
       <p class="para">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
         excepturi tempora ipsa? Consectetur in exercitationem, a recusandae amet
@@ -215,5 +291,31 @@
         dolore iste quod explicabo optio? Autem, doloribus corporis?
       </p>
     </div>
+    </div>
+    <!-- update the version number as needed -->
+    <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/7.14.5/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.5/firebase-database.js"></script>
+    <script src="/__/firebase/7.14.5/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC-zVuKHsYiwagXEbtpf3Y-xHlp_Fjg_3E",
+        authDomain: "landai-chat.firebaseapp.com",
+        databaseURL: "https://landai-chat.firebaseio.com",
+        projectId: "landai-chat",
+        storageBucket: "landai-chat.appspot.com",
+        messagingSenderId: "17564803050",
+        appId: "1:17564803050:web:9b9ecd35cc88273708dc93",
+        measurementId: "G-5WJXZFWCKH"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.database();
+    </script>
+    <script src="app.js"></script>
   </body>
-</html>
+</html class="scrollLock" lang="en">
