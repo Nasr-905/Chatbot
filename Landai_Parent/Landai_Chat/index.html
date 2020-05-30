@@ -21,8 +21,8 @@
           </div>
           <a class="" href="about.html">About</a>
           <div>
-            <div class="">
-              <button onclick="modalOpen('id01'); showDialog()" class="w3-button loggedIn">
+            <div class="loggedIn">
+              <button onclick="modalOpen('id01'); showDialog()" class="w3-button ">
               Contact
             </button>
             </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="loggedIn">
-          <a onclick="logout()" class="">Log out</a>            
+          <a id="logout" onclick="logout" class="">Log out</a>            
           </div>
           <div class="loggedIn profile">
             <a class="" href="./profile.html">Profile</a>
@@ -69,9 +69,12 @@
             <img class="navlogo" src="./Images/logo.png" alt="" />
           </div>
           <div class="">
-            <button onclick="modalOpen('id02'); showDialog()" class="w3-button loggedOut">
+            <div class="loggedOut">
+              <button onclick="modalOpen('id02'); showDialog()" class="w3-button ">
               Sign Up
             </button>
+            </div>
+            
             <div id="id02" class="w3-modal">
               <div class="w3-modal-content" style="width: 740px;">
                 <div class="w3-container">
@@ -99,6 +102,7 @@
                         <br>
                         <br>
                         <input style="width: 200px;" type="submit" name="submit" id="">
+                        <p class="error"></p>
                       </form>
                       <br />
                       <br />
@@ -108,8 +112,8 @@
             </div>
           </div>
             <div>
-              <div class="">
-                <button onclick="modalOpen('id03'); showDialog()" class="w3-button">
+              <div class="loggedOut">
+                <button onclick="modalOpen('id03'); showDialog()" class="w3-button ">
               Log In
             </button>
               </div>
@@ -140,6 +144,7 @@
                         <br>
                         <br>
                         <input style="width: 200px;" type="submit" name="submit" id="">
+                        <p class="error"></p>
                       </form>
                       <br />
                       <br />
